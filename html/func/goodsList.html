@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../../css/iuapmobile.um.css">
+		<link rel="stylesheet" href="../../css/font-icons.css">	
+		<link rel="stylesheet" href="../util.css">
+        <link rel="stylesheet" type="text/css" href="../../css/iuapmobile.um.listview.css">
+        <link rel="stylesheet" type="text/css" href="../../css/mint.css">
+		<script src="../../js/summer.js" ></script>		
+		<script src="../../js/jquery.min.js" ></script>
+		<script src="../../js/Frameworks/iuapmobile.frameworks.ui.js" ></script>
+        <style>
+			.ch-bg {
+			    height: 110px;
+			    background-color: #034B95;
+			    position: fixed;
+			    width: 100%;
+			}
+			.box {
+				width: 100%;
+			    overflow: hidden;
+			    position: relative;
+			}
+			
+			.mint-popup-1 {
+			    border-radius: 8px;
+   				width: 80%;
+   				top: 5rem;
+			    padding: 5px 15px 20px 15px;
+			}
+			.mint-popup-1 h3{
+				color: #232323;
+			}
+			.mint-popup-1 p {
+				color: #666;
+			}
+			
+			.cell {
+				border-bottom:1px solid #f1f4f6;
+		    	background: #fff;
+			}
+			.ch-group-title-mark:before {
+				content:"";
+				display:inline-block;
+				width:6px;
+				height:6px;
+		   		position: relative;
+    			bottom: 2px;
+				border-radius:50%;
+				background: #1274CB;
+			}
+			.title-content {
+				display: flex;
+			    flex-direction: row;
+			    align-items: center;
+			    justify-content:space-between;
+				margin-left: 0rem;
+				margin-right: 0.3rem;
+			}
+			.title-content .row {
+				font-size: 16px;
+				color: #333333;
+			}
+			.title-content .ch-list-row-time {
+				color: #999999;
+				font-size: 12px;
+			}
+			.content {
+				display:flex;
+				flex-direction:row;
+				justify-content:space-between;
+				align-items:center;
+			}
+			
+			.data-content {
+				width: 100%;
+				color: #999999;
+				font-size:14px;
+			}
+			.data-content div {
+				margin-top:6px;
+			}
+			
+			.arrow-content {
+				margin-right:0.3rem;
+				margin-top:-0.3rem;
+			}
+			
+			.ch-status-btn {
+			    font-size: 0.28rem;
+			    border-radius: 0.2rem;
+			    width: 1.2rem;
+			    height: 0.4rem;
+			    text-align: center;
+			}
+			.ch-list-row{
+				white-space:normal;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="um-win" id="index">
+            <div class="um-header x-div-imgbg">
+            	<a href="#" class="um-back" @click="closeWin">返回</a>
+            	<h3>采购清单</h3>
+            	<div class="um-header-btns" @click="addPurchaseOrder">
+            		<i class="ti-plus" style="transform: rotate(90deg);"></i>
+            	</div>
+            </div>
+			<div class="um-content">
+				<div class="loading"></div>
+        		<div class="um-listview-wrap list" id="listview">
+					<mt-loadmore :top-method="loadTop" :bottom-method="loadBottom" 
+					top-pull-text="放手啊，不想刷新别拉我(｡•ˇ‸ˇ•｡)" top-drop-text="够了啊，我赶着刷新呢(｡•ˇ‸ˇ•｡)" top-loading-text="别急，马上就好(｡•ˇ‸ˇ•｡)" 
+					bottom-pull-text="放手啊，不想刷新别拉我(｡•ˇ‸ˇ•｡)" bottom-drop-text="够了啊，我赶着刷新呢(｡•ˇ‸ˇ•｡)" bottom-loading-text="别急，马上就好(｡•ˇ‸ˇ•｡)" ref="loadmore">
+						<ul class="um-list um-no-active" style="background-color: transparent">
+							<li class="um-listview-row p5 cell" v-for="(item, index) in listDatas" ref="button" :key="index" 
+								@click="itemClick(index)" @touchstart="tapHold(index)" 
+								@touchmove="cancelTapHold" @touchend="cancelTapHold">
+								<div class="title-content">
+									<div style="display: flex;flex-direction: row;align-items:center;">
+										<div class="ch-group-title-mark">
+											{{item.goodsName }}
+										</div>
+									</div>
+									<div class="ch-list-row-time">
+										{{item.time}}
+									</div>
+								</div>
+								<div class="content">
+									<div class="data-content">
+										<div class="ch-list-row ch-list-row-note">
+											{{item.mark}}
+										</div>
+									</div>
+									<span class="arrow-content" style="color:#FE90A0"></span>
+								</div>
+								<div class="footer-content">
+									<div class="footer-left">
+										采购量 <span class="footer-important-item">{{item.conunt}}</span><span>{{item.goodsUnit}}</span>
+									</div>
+									<div class="footer-right tr">
+										单价 <span class="footer-important-item">{{item.price}}</span><span>{{item.priceUnit}}</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</mt-loadmore>
+				</div>
+
+			</div>
+		</div>
+		<script type="text/javascript" src="../../js/vue.js"></script>
+        <script type="text/javascript" src="../../js/mint.js"></script>
+		<script src="../../js/util.js"></script>
+        <script src="./goodsList.js"></script>
+	</body>
+</html>

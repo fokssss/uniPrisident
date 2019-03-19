@@ -1,0 +1,350 @@
+html {
+	background: #efeff4;
+}
+
+/* 移动设备 */
+@media screen and (min-width: 100px) { 
+	/* 登录 */
+	.ch-login-wrap {
+		 width: calc(100% - 1rem) !important;
+		 margin: 15% auto;
+		 padding: 15% 10%;
+	}
+	.um-header-x {
+		padding-top: 10px;
+	}
+	.um-img-responsive {
+		width: 0.7rem;
+	}
+	.data-content {
+		margin-left: 0.1rem;
+	}
+	.footer-content .footer-left,.footer-content .footer-right {
+		padding: 0 0.1rem;
+	}
+	.ch-edit-wrap {
+    	padding: 0 10px;
+    }
+}
+/* 移动设备横屏 */
+@media screen and (min-width: 100px) and (max-width: 800px) and (orientation : landscape) {  
+	/* 登录 */
+	.ch-login-wrap {
+		 width: calc(100% - 1rem) !important;
+		 margin: 1% auto;
+		 padding: 2% 21%;
+	}
+}
+/* and (orientation : portrait) */
+
+/* iPad & iPad Mini */
+@media screen and (min-width: 1024px) {
+	.ch-login-wrap {
+		margin: 15% auto;
+	    padding: 5% 4%;
+	}
+	.ch-logo-wrap img {
+		width: 100%;
+	}
+	.um-header-x {
+		padding-top: 20px;
+	}
+	.x-div-imgbg {
+		min-height: 88px;
+	}
+	.um-header-title, .um-header h3, .um-header-light h3 {
+		padding: 30px 0;
+		font-size: .14rem;
+	}
+	.um-back, .um-header-right, .um-header-left {
+		line-height: 96px;
+	}
+	.data-content {
+		margin-left: 0.05rem !important;
+	}
+	.footer-content .footer-left,.footer-content .footer-right {
+		padding: 0 0.05rem;
+	}
+	.ch-edit-wrap {
+    	padding: 0 25px;
+    }
+}
+
+/* PC */
+@media screen and (min-width: 1222px) { 
+	.ch-login-wrap {
+		width: 40% !important;
+		margin: 10% auto;
+	    padding: 5% 4% !important;
+	}
+	.form-group + .form-group {
+		margin-top: 0.2rem !important;
+	}
+	.data-content {
+		margin-left: 0.05rem !important;
+	}
+	.footer-content .footer-left,.footer-content .footer-right {
+		padding: 0 0.05rem;
+	}
+	.ch-edit-wrap {
+    	padding: 0 30px;
+    }
+}
+@media screen and (min-width: 1222px) and (orientation : portrait) { 
+	.ch-login-wrap {
+	    width: 60% !important;
+	    margin: 25% auto;
+	    padding: 15% 4% !important;
+	}
+}
+.sa-group-title {
+	font-size: 0.3rem;
+}
+.sa-group-title-item {
+		font-size: 0.2rem;
+		color: #828282;
+	}
+	
+.sa-group-mt {
+	margin-top: .45rem;
+}
+.sa-group-sep {
+	margin-top: .2rem;
+}
+.um-grid {
+	padding: 0.2rem;
+}
+.sa-group-wrapper {
+	padding: 0.1rem 0.2rem;
+    border-radius: 12px;
+    background: #fff;
+    overflow: hidden;
+    box-shadow:0px 3px 10px rgba(18,116,203,0.05);
+}
+
+#myChart:first-child {
+    width: 100% !important;
+}
+
+/* 导航栏 */
+.x-div-imgbg {
+	background: url(../img/main_head_red@2x.png) no-repeat;
+	background-size: 100%, 100%;
+}
+.um-header-x {
+	position: relative;
+	z-index: 5;
+	text-align: left;
+	color: #FFFFFF;
+}
+
+/* 列表 */
+.um-listview-row {
+	min-height: 86.2px;
+	max-height: 120px;
+}
+.ch-list-row-note {
+	min-height: 25px;
+	max-height: 44px;
+	overflow: hidden;
+}
+.footer-content {
+	display: flex;
+}
+.footer-content .footer-left,.footer-content .footer-right {
+	flex-grow: 1;
+	color: #88c3f7;
+	font-size: 12px;
+}
+.footer-important-item {
+	color:#ec1542;
+	font-size: 16px;
+}
+
+/* 编辑页 */
+.ch-group-title-mark {
+    position: relative;
+    color: #232323;
+    padding-left: 10px;
+    color: #232323;
+    padding-left: 12px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.ch-group-title-mark:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top:0;
+    width: 4px;
+    height: 100%;
+    left: 0;
+    background: #19abd6;
+    background: linear-gradient(to bottom,#FF4081 75%, whitesmoke 100%) left center no-repeat;
+    background-size: 100%;
+    border-radius: 0px 2px 2px 0px;
+}
+.ch-edit-wrap {
+    background: #fff;
+}
+.ch-edit-row {
+    padding: 5px 0;
+    border-bottom: 1px solid #E1DDDD;
+}
+.ch-edit-label {
+    font-size: 13px;
+    color: #999;
+    line-height: 28px;
+}
+.ch-edit-row textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: #FCFCFC;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+    font-family: Arial;
+}
+.df {
+    display: flex;
+    display: -webkit-flex;
+}
+.fg1 {
+	flex-grow: 1;
+}
+.fg2 {
+	flex-grow: 2;
+}
+.lh28 {
+	line-height: 28px;
+}
+/* 单位颜色 */
+.unit-color {
+    color: #999
+}
+.um-btn-success {
+    background-color: #1274CB;
+}
+
+.ch-edit-input {
+    border: none;
+    background: transparent;
+    height: 28px;
+    outline: none;
+    color: #333;
+    font-size: 14px;
+    text-align: right;
+}
+/* 占位符样式 */
+::-webkit-input-placeholder { color:#dfdfdf; }
+::-moz-placeholder { color:#dfdfdf; } /* firefox 19+ */
+:-ms-input-placeholder { color:#dfdfdf; } /* Internet Explorer 10+ */
+:-moz-placeholder { color:#dfdfdf; } /* firefox 14-18 */
+
+/* 加载动画 */
+.loading {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    text-align: center;
+}
+.loading:before {
+    display: inline-block;
+    vertical-align: text-bottom;
+    content: ' ';
+    height: 400px;
+    width: 300px;
+    margin-right: 6px;
+    background: url(../img/loading.gif) no-repeat center;
+    -webkit-background-size: contain;
+    background-size: contain;
+}
+
+/* 登录 */
+.ch-login-wrap {
+	height: 100%;
+    width: 80%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    text-align: center;
+}
+h4 {
+	font-weight: 400;
+	font-size: 24px;
+	color: #FF4081;
+	margin: 15px auto;
+}
+.ch-logo-wrap img {
+	width: 100%;
+}
+.form-group {
+	margin-top: 20px;
+	position: relative;
+	font-size: 15px;
+	color: #666;
+}
+.form-group + .form-group {
+	margin-top: .3rem;
+}
+.form-group .form-label {
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+	font-size: 15px;
+}
+.form-group .ch-form-control {
+	position: relative;
+	width: 100%;
+
+	z-index: 3;
+	padding: 5px 0;
+	border: none;
+	border-bottom: 1px solid #777;
+	background: none;
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+}
+.form-group .ch-form-control:invalid {
+	outline: none;
+}
+.form-group .ch-form-control:focus, .form-group .ch-form-control:valid {
+	outline: none;
+	color: #FF4081;
+	border-color: #FF4081;
+}
+.form-group .ch-form-control:focus + .form-label, .form-group .ch-form-control:valid + .form-label {
+	font-size: 12px;
+	-ms-transform: translateY(-15px);
+	-webkit-transform: translateY(-15px);
+	transform: translateY(-15px);
+}
+.ch-login-btn {
+	background: #f1374d;
+	width: 100%;
+	height: 44px;
+	border-radius: 8px;
+	color: #fff;
+	font-size: 15px;
+	border: none;
+	margin: auto;
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+	box-shadow: 1px 0px 0px rgba(0, 0, 0, 0.3) inset;
+	margin-top: 30px;
+	right: -30px;
+	bottom: 90px;
+	cursor: pointer;
+}

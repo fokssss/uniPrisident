@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/font-icons.css">
+		<link rel="stylesheet" href="css/iuapmobile.um.css">
+		<link rel="stylesheet" href="./js/mui/css/mui.css">
+		<link rel="stylesheet" href="html/util.css" media="all" />
+		<script src="js/summer.js" ></script>
+		<script src="js/jquery.min.js" ></script>
+		<script src="js/Frameworks/iuapmobile.frameworks.ui.js" ></script>
+		<script src="js/mui/js/mui.js"></script>
+		<style>
+			body{
+				background: #efeff4;
+			}
+			.um-group-title-l {
+				padding-left: calc(25% / 2 - 10%);
+				font-weight:530;
+			}
+			.um-group-title-l .ti-angle-right {
+				position: relative;
+    			top: 1px;
+			}
+			.um-group-title-l.sec {
+				color: #ec1c4a;
+			    font-weight: bold;
+			    font-size: larger;
+			}
+			/*tab1*/
+			.mui-bar {
+				font-size: 12px;
+			}
+			.mui-bar-tab .mui-tab-item.mui-active {
+				color: #d01125;
+			}
+			.mui-bar-tab .mui-tab-item .mui-icon-task {
+				background: url("./img/task.png") no-repeat center center;
+				background-size: contain;
+				width: 16px;
+			}
+			.mui-bar-tab .mui-tab-item.mui-active .mui-icon-task {
+				background: url("./img/tasked.png") no-repeat center center;
+				background-size: contain;
+				width: 16px;
+			}
+
+			.mui-bar-tab .mui-tab-item .mui-icon-gg {
+				background: url("./img/zc.png") no-repeat center center;
+				background-size: contain;
+				width: 17px;
+			}
+			.mui-bar-tab .mui-tab-item.mui-active .mui-icon-gg {
+				background: url("./img/zced.png") no-repeat center center;
+				background-size: contain;
+				width: 17px;
+			}
+
+			.work {
+				position: absolute;
+				top: -15px;
+				margin-left: -25px;
+				left: 50%;
+			    z-index: 100;
+			}
+			.work img {
+				width: 50px;
+			}
+
+			.mui-bar-tab .mui-tab-item .mui-icon-contacts {
+				background: url("./img/contact.png") no-repeat center center;
+				background-size: contain;
+				width: 17px;
+			}
+			.mui-bar-tab .mui-tab-item.mui-active .mui-icon-contacts {
+				background: url("./img/contact_active.png") no-repeat center center;
+				background-size: contain;
+				width: 17px;
+			}
+
+			.mui-bar-tab .mui-tab-item .mui-icon-my {
+				background: url("./img/my.png") no-repeat center center;
+				background-size: contain;
+				width: 18px;
+			}
+			.mui-bar-tab .mui-tab-item.mui-active .mui-icon-my {
+				background: url("./img/my_active.png") no-repeat center center;
+				background-size: contain;
+				width: 18px;
+			}
+		</style>
+
+	</head>
+	<body>
+		<div id="win" class="um-win" >
+			<div id="header" class="um-header-x x-div-imgbg">
+				<h3 id="sa-title">&nbsp;&nbsp;功能测试</h3>
+			</div>
+
+			<div id="content" class="um-content">
+				<div class="loading"></div>
+				<div class="um-grid">
+					<div class="sa-group-wrapper">
+						<div class="um-grid-row sa-group-title">
+							<div class="um-group-title-l">常用应用<span class="ti-angle-right"></span></div>
+						</div>
+	                	<div class="um-grid-row tc sa-group-mt">
+	                		<div @click="openWin('buy')">
+	                			<a href="#" class="um-circle um-black">
+	                				<img src="img/mt_food.png"  class="um-img-responsive" alt="">
+	                				<div class="mt5 sa-group-title-item">采购清单</div>
+	                			</a>
+	                		</div>
+	                		<div @click="openWin('ktv')">
+	                			<a href="#" class="um-circle um-black">
+	                				<img src="img/mt_mv.png"  class="um-img-responsive" alt="">
+	                				<div  class="mt5 sa-group-title-item">详情页</div>
+	                			</a>
+	                		</div>
+	                		<div @click="openWin('hotel')">
+	                			<a href="#" class="um-circle um-black">
+	                				<img src="img/mt_hotal.png"  class="um-img-responsive" alt="">
+	                				<div  class="mt5 sa-group-title-item">编辑页</div>
+	                			</a>
+	                		</div>
+	                		<div @click="openWin('movie')">
+	                			<a href="#" class="um-circle um-black">
+	                				<img src="img/mt_ktv.png"  class="um-img-responsive" alt="">
+	                				<div  class="mt5 sa-group-title-item">扫码</div>
+	                			</a>
+	                		</div>
+	                	</div>
+					</div>
+                	<div class="um-grid-row tc sa-group-sep">
+                        <div class="sa-group-wrapper">
+                         	<div class="um-grid-row sa-group-title tl">
+								<div class="um-group-title-l">扫描结果<span class="ti-angle-right"></span></div>
+							</div>
+							<div class="um-grid-row sa-group-title">
+								<div class="um-group-title-l sec"></div>
+							</div>
+                            <img id="main" src="./img/love.png" width="144" alt="" class="um-rounded" >
+
+						</div>
+					</div>
+                </div>
+			</div>
+
+			<div id="footer" class="um-footer">
+				<div class="um-footerbar">
+					<nav class="mui-bar mui-bar-tab">
+						<a class="mui-tab-item mui-active" href="#task" data-func='setTitle(1)'> <span class="mui-icon mui-icon-task"></span> <span class="mui-tab-label">待办</span> </a>
+						<a class="mui-tab-item" href="#tabbar" data-func='setTitle(2)'> <span class="mui-icon mui-icon-gg"></span> <span class="mui-tab-label">政策</span> </a>
+						<a class="mui-tab-item" href="#tabbar-work" data-func='setTitle(3)'>
+						<div style="position: relative;width: 100%">
+							<div class="work"><img src="./img/bar3.png" />
+							</div>
+						</div> <span class="mui-icon"></span> <span class="mui-tab-label">工作台</span> </a>
+						<a class="mui-tab-item" href="#tabbar-contact" data-func='setTitle(4)'> <span class="mui-icon mui-icon-contacts"></span> <span class="mui-tab-label">通讯录</span> </a>
+						<a class="mui-tab-item" href="#tabbar-my" data-func='setTitle(5)'> <span class="mui-icon mui-icon-my"></span> <span class="mui-tab-label">我的</span> </a>
+					</nav>
+				</div>
+			</div>
+		</div>
+		
+		<script src="js/vue.js"></script>
+		<script src="js/util.js"></script>
+		<script src="js/index.js" ></script>
+	</body>
+</html>

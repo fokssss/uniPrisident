@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html class="um-win">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, initial-scale=1.0">
+		<link rel="stylesheet" href="../../css/iuapmobile.um.css">
+		<link rel="stylesheet" href="../../html/util.css" />
+		<title>login</title>
+		
+		<style>
+			html{
+				background: url(../../img/main_head_red@2x.png) repeat;
+    			background-size: 100% 100%;
+			}
+			
+			a {
+				display: inline-block;
+			    margin-top: 10px;
+			    text-decoration: none;
+			    color: #f1374d;
+			    font-size: 14px;
+			    float: right;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="um-win" id="index">
+			<div class="ch-login-wrap">
+				<div class="ch-logo-wrap">
+					<img src="./logo.jpg" alt="" />
+				</div>
+				
+				<div class="form-group">
+					<input required="required" class="ch-form-control" v-model="uname"/>
+					<label class="form-label">用户名</label>
+				</div>
+				<div class="form-group">
+					<input type="password" required="required" class="ch-form-control" v-model="upwd" />
+					<label class="form-label">密　码</label>
+				</div>
+				<button class="ch-login-btn" @click="loginClick">
+					<i class="icon-arrow"></i>登录
+				</button>
+				<a href="#">忘记密码 ? </a>
+			</div>
+		</div>
+		<script src="../../js/summer.js"></script>
+		<script src="../../js/vue.js"></script>
+		<script src="../../js/util.js"></script>
+		<script src="login.js"></script>
+	</body>
+</html>

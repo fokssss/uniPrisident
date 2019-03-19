@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../../css/iuapmobile.um.css">
+		<link rel="stylesheet" href="../../css/font-icons.css">
+		<link rel="stylesheet" href="../util.css">
+		<link rel="stylesheet" type="text/css" href="../../css/mint.css">
+		<script src="../../js/summer.js" ></script>
+		<script src="../../js/jquery.min.js" ></script>
+		<script src="../../js/Frameworks/iuapmobile.frameworks.ui.js" ></script>
+	</head>
+	<body>
+		<div class="um-win" id="index">
+			<div class="um-header x-div-imgbg">
+				<a href="#" class="um-back" @click="closeWin">返回</a>
+				<h3>采购商品详情</h3>
+				<!--
+				<div class="um-header-btns">
+				<i class="ti-more" style="transform: rotate(90deg);"></i>
+				</div>
+				-->
+			</div>
+			<div class="um-content">
+				<div class="loading"></div>
+				<div class="ch-group-title-mark mt10 mb5">
+					采购单详情
+				</div>
+				<div class="ch-edit-wrap">
+					<div class="w df ch-edit-row">
+						<div class="fg1 ch-edit-label">
+							商品名称
+						</div>
+						<input type="text" placeholder="请输入待采购商品名称" class="fg2 ch-edit-input" disabled v-model="goods.goodsName">
+					</div>
+					<div class="w df ch-edit-row">
+						<div class="fg1 ch-edit-label">
+							采购数量
+						</div>
+						<input type="text" placeholder="请输入待采购商品数量" class="fg2 ch-edit-input" disabled v-model="goods.conunt">
+						<span class="f12 lh28 unit-color">{{goods.goodsUnit}}</span>
+					</div>
+					<div class="w df ch-edit-row">
+						<div class="fg1 ch-edit-label">
+							含税单价
+						</div>
+						<input type="text" placeholder="请输入待采购商品单价" class="fg2 ch-edit-input" disabled v-model="goods.price">
+						<span class="f12 lh28 unit-color">{{goods.priceUnit}}</span>
+					</div>
+
+					<div class="w df ch-edit-row">
+						<div class="fg1 ch-edit-label">
+							采购地点
+						</div>
+						<input type="text" placeholder="请输入待采购商品采购地点" class="fg2 ch-edit-input" disabled v-model="goods.source">
+					</div>
+					<div class="w df ch-edit-row um-noborder">
+						<div class="fg1 ch-edit-label">
+							申请时间&nbsp;&nbsp;&nbsp;&nbsp;
+						</div>
+						<input type="text" placeholder="请输入提出申请时间" class="fg2 ch-edit-input" disabled v-model="goods.time">
+					</div>
+				</div>
+				<div class="ch-group-title-mark mt10 mb5">
+					组织信息
+				</div>
+				<div class="ch-edit-wrap">
+					<div class="w df ch-edit-row">
+						<div class="fg1 ch-edit-label">
+							采购部门
+						</div>
+						<input type="text" placeholder="请输入采购部门" class="fg2 ch-edit-input" disabled v-model="goods.dep">
+					</div>
+					<div class="w df ch-edit-row um-noborder">
+						<div class="fg1 ch-edit-label">
+							申请人&nbsp;&nbsp;&nbsp;&nbsp;
+						</div>
+						<input type="text" placeholder="请输入采购申请人" class="fg2 ch-edit-input" disabled v-model="goods.approver">
+					</div>
+				</div>
+				<div class="ch-group-title-mark mt10 mb5">
+					其他
+				</div>
+				<div class="ch-edit-wrap">
+					<div class="w ch-edit-row um-noborder">
+						<div class="fg1 ch-edit-label">
+							备注&nbsp;&nbsp;&nbsp;&nbsp;
+						</div>
+						<textarea name="" class="w" cols="30" rows="4" readonly="true" v-model="goods.mark"></textarea>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="../../js/vue.js"></script>
+		<script type="text/javascript" src="../../js/mint.js"></script>
+		<script src="../../js/util.js"></script>
+		<script src="./goodsDetail.js"></script>
+	</body>
+</html>
